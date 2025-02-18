@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "IBKR Spread Calculator",
+    "version": "1.0",
+    "description": "Calculates and displays the spread between ask and bid prices on IBKR.",
+    "icons": {
+    "16": "icons/bar-chart-twemoji-16.png",
+    "48": "icons/bar-chart-twemoji-48.png",
+    "96": "icons/bar-chart-twemoji-96.png",
+    "128": "icons/bar-chart-twemoji-128.png"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.interactivebrokers.com/*",
+                "*://*.interactivebrokers.co.uk/*",
+                "*://*.interactivebrokers.de/*",
+                "*://*.interactivebrokers.fr/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
